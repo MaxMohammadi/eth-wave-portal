@@ -9,6 +9,9 @@ const main = async () => {
 
     let waveCount;
     waveCount = await waveContract.getTotalWaves();
+
+    let waveCountPerPerson;
+    waveCountPerPerson = await waveContract.getWavesPerPerson();
   
     let waveTxn = await waveContract.wave();
     await waveTxn.wait();

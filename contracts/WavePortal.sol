@@ -6,8 +6,9 @@ import "hardhat/console.sol";
 
 contract WavePortal {
     uint256 totalWaves;
+    uint256 addressWaves;
 
-    mapping(address => uint256) addressWaves;
+    // mapping(address => uint256) public addressWaves;
 
     constructor() {
         console.log("Yo yo, I am a contract am I am smart");
@@ -24,7 +25,8 @@ contract WavePortal {
         return totalWaves;
     }
 
-    // function getWavesPerPerson() external {
-    //     addressWaves[msg.sender] += 1;
-    // }
+    function getWavesPerPerson() public view {
+        console.log("hello", addressWaves);
+        // addressWaves[msg.sender] += 1;
+    }
 }
